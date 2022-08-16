@@ -1,0 +1,30 @@
+.button-container {
+  color: #fff;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  background-color: #000;
+  width: 200px;
+  border: 2px solid transparent;
+  padding: 18px;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+  &:hover {
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+  }
+}
+.inverted {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid transparent;
+  }
+}
+.google-sign-in {
+  background-color: lightblue;
+  border: 2px solid #000;
+}
