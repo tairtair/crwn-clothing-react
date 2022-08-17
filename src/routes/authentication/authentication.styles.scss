@@ -1,0 +1,11 @@
+.authentication-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 60px auto;
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

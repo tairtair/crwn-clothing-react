@@ -41,6 +41,8 @@ const SignUpForm = () => {
         alert(
           'Account linked to provided email already exists, please try to log in instead.'
         );
+      if (err.code === 'auth/weak-password')
+        alert('Password should be at least 6 characters. Please try again');
       console.log('user creation encounted an error', err.message);
     }
   };
@@ -83,7 +85,7 @@ const SignUpForm = () => {
           required
         />
         {/* <button type="submit">Sign Up</button> */}
-        <Button btnTitle="Sign Up" type="submit" />
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
   );
