@@ -4,36 +4,32 @@ import Button from '../button/button.component';
 import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 import { useState } from 'react';
+// import { useState, useContext } from 'react';
+// import { UserContext } from '../../contexts/user.context';
 const defaultFormFields = {
   email: '',
   password: '',
 };
-const logGoogleUser = async () => {
-  const { user } = await signInWithGooglePopup();
-  await createUserDocumentFromAuth(user);
-};
 
 const SignInForm = () => {
+  const [formFields, setformFields] = useState(defaultFormFields);
+  const { email, password } = formFields;
+  // const { setCurrentUser } = useContext(UserContext);
   const resetFormFields = () => {
     setformFields(defaultFormFields);
   };
-  const [formFields, setformFields] = useState(defaultFormFields);
-  const { email, password } = formFields;
+
   const handleChange = e => {
     const { value, name } = e.target;
     setformFields({ ...formFields, [name]: value });
   };
+  const logGoogleUser = async () => await signInWithGooglePopup();
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (err) {
       switch (err.code) {
@@ -53,7 +49,6 @@ const SignInForm = () => {
       // console.error(err);
     }
   };
-  console.log(formFields);
   return (
     <div className="sign-in-form-container">
       <h2>I already have an account</h2>
