@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
+  // padding: 40px 20px;
   // margin-bottom: 20px;
 
   .logo-container {
@@ -16,6 +16,7 @@
   .nav-links-container {
     display: flex;
     gap: 20px;
+    align-items: center;
 
     .nav-link {
       // padding: 10px 15px;
