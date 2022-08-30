@@ -1,0 +1,30 @@
+.checkout-item {
+  align-self: center;
+  justify-self: center;
+  .btn-decrease,
+  .btn-increase {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  &-image {
+    width: 100%;
+  }
+  &-quantity {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+    span {
+      width: 30px;
+      text-align: center;
+    }
+  }
+
+  &-delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,28 @@
+.checkout-container {
+  width: 75vw;
+  margin: 60px auto 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 30px;
+  row-gap: 15px;
+  .checkout-header {
+    justify-self: center;
+    font-weight: 600;
+  }
+  .checkout-item-container {
+    border-bottom: 2px solid black;
+  }
+  .checkout-total {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-column: 5;
+    justify-self: end;
+  }
+  .line {
+    grid-column: 1/-1;
+    height: 2px;
+    background: lightgray;
+  }
+}

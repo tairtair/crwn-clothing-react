@@ -20,13 +20,16 @@
     height: 240px;
     display: flex;
     flex-direction: column;
-    // overflow: scroll;
+    overflow-x: scroll;
   }
 
   button {
     margin-top: auto;
   }
+  &:hover ::-webkit-scrollbar {
+    visibility: visible;
+  }
 }
-.hidden {
-  display: none;
+::-webkit-scrollbar {
+  visibility: hidden;
 }
